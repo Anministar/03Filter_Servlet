@@ -18,8 +18,10 @@ public class FrontFilter implements Filter{
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
 			throws IOException, ServletException {
 		//request에 데이터가 쌓이기(들어가기) 전에
-		System.out.println("[FrontFilter] Start!");
+		 System.out.println("[FrontFilter] Start!");
+		
 		chain.doFilter(req, resp);
+		
 		System.out.println("[FrontFilter] End!");
 		//후
 		
